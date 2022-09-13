@@ -12,7 +12,7 @@ import java.util.Optional;
 
 @RestController
 public class StudentController {
-    
+
 
     @Autowired
     StudentRepository studentRepository;
@@ -26,12 +26,14 @@ public class StudentController {
 
     // Mappings - URL endpoints
     // Get the list of all student
+    
     @GetMapping("/listStudents")
     public List<Student> getAllStudents() {
         return studentRepository.findAll();
     }
 
     // Get the student information
+
     @GetMapping("/student/{id}")
     public Student getStudent(@PathVariable Integer id) {
         return studentRepository.findById(id).get();

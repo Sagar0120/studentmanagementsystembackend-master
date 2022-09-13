@@ -26,7 +26,7 @@ public class StudentController {
 
     // Mappings - URL endpoints
     // Get the list of all student
-    
+
     @GetMapping("/listStudents")
     public List<Student> getAllStudents() {
         return studentRepository.findAll();
@@ -40,6 +40,7 @@ public class StudentController {
     }
 
     // Delete the student
+
     @DeleteMapping("/student/{id}")
     public List<Student> deleteStudent(@PathVariable Integer id) {
         studentRepository.delete(studentRepository.findById(id).get());
@@ -47,6 +48,7 @@ public class StudentController {
     }
 
     // Add new student
+
     @PostMapping("/student")
     public List<Student> addStudent(@RequestBody Student student) {
         studentRepository.save(student);
@@ -54,6 +56,7 @@ public class StudentController {
     }
 
     // Update the student information
+
     @PutMapping("/student/{id}")
     public List<Student> updateStudent(@RequestBody Student student, @PathVariable Integer id) {
         Student studentObj = studentRepository.findById(id).get();
@@ -62,5 +65,4 @@ public class StudentController {
         studentRepository.save(studentObj);
         return studentRepository.findAll();
     }
-
 }

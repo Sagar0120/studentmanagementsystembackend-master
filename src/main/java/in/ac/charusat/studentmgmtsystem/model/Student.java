@@ -11,6 +11,7 @@ public class Student {
     private String name;
     private String address;
 
+
     public Student(Integer id, String name, String address) {
         this.id = id;
         this.name = name;
@@ -18,7 +19,6 @@ public class Student {
     }
 
     public Student() {
-
     }
 
     public Integer getId() {

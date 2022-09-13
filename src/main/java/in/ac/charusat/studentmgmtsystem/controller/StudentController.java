@@ -64,5 +64,6 @@ public class StudentController {
         studentObj.setAddress(student.getAddress());
         studentRepository.save(studentObj);
         return studentRepository.findAll();
+        
     }
 }
